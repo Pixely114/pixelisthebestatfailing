@@ -1,47 +1,72 @@
+<!DOCTYPE html>
 <html>
-    <head>
-       <title>Retro Game Hub by Pixel</title>
-       <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/g2zQ28nv/Pixely.webp">
-       <style>
-           div.gc {
-               background-color:rgb(255,165,0);
-               border: 5px solid black;
-               outline-style: solid;
-               outline-color: rgb(0,0,0,0.75);
-               outline-width: thin;           
-               border-radius: 25px;
-               height:100px;
-               width:100px;
-               vertical-align: super;
-           }
-           a {
-               
-           }
-           img {
-               left offset:20px;
-               border-radius: 20%;
-           }
-       </style>
-    </head>
-    <body style="background-color:black">
-        <header>
-            <img src="https://i.postimg.cc/SK3T1X3X/logo.png">
-        </header>
-        <h3 style="color:white">Games you can play so far:</h3>
-        <div class="gc">
-            <a href="https://pixelisthebestatfailing.on.drv.tw/game/Famidash/">
-                <img src="https://play-lh.googleusercontent.com/ixHXzBWPmmKWIBxDMfjbIXK10UQCTDvIYOcs_uLXHCRbdsz2siJFYfb7MqckU8eC3Ks=s48-rw" width="100" height="100">
-            </a>
+<head>
+    <title>Pixel is too BAD</title>
+    <style>
+        body {
+            background: #ffa500 url(/img/Flag_of_the_Netherlands.svg) right center/cover no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        .title {
+            font-size: 2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .game-container {
+            width: 960px;
+            height: 720px;
+            max-width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        #game {
+            width: 100%;
+            height: 100%;
+        }
+
+        .credits {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            padding: 10px;
+            font-size: 0.9em;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Famidash</h1>
+    <div class="game-container">
+        <div id="game"></div>
+        <div class="credits">
+            <h6>Core:</h6>
+            <a href="https://github.com/EmulatorJS/EmulatorJS.git">EmulatorJS</a>
+            <h6>Games:</h6>
+            <a href="https://github.com/famidash/famidash.git">Famidash , a NES port of Geometry Dash</a>
         </div>
-        <div class="gc">
-            <a href="https://pixelisthebestatfailing.on.drv.tw/game/FIFA07%2Fwasted/">
-                <img src="https://images.emulatorgames.net/gameboy-advance/fifa-2007.webp" width="100" height="100">
-            </a>
-        </div>
-        <div class="gc">
-            <a href="https://pixelisthebestatfailing.on.drv.tw/game/FlappyBird/">
-                <img src="https://raw.githubusercontent.com/retrobrews/nes-games/master/flappybird.png" width="100" height="100">
-            </a>
-        </div>
-    </body>
+    </div>
+    <script>
+        EJS_player = "#game";
+        EJS_core = "nes";
+        EJS_gameName = "GD";
+        EJS_color = "#ffa500";
+        EJS_startOnLoaded = true;
+        EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+        EJS_gameUrl = "Famidash.Demo.4.05.1.nes";
+    </script>
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+</body>
 </html>
